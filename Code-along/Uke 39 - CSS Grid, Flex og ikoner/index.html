@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktside - Pink runners</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="grid-container">
+    <header> 
+        <form>
+            <input type="search" />
+            <button type="submit">Search</button>
+
+        </form>
+        <img id="logo" src="img/logo.png" alt="Logo for BTS" />
+        <section>
+            <a href="#">Sign in</a>
+            <a href="#">Shopping cart</a>
+
+        </section>
+    </header>
+        <nav id="global-navigation">
+        <ul>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>Men</a></li>
+            <li><a href='#'>Children</a></li>
+            <li><a href='#'>Woman</a></li>
+        </ul>
+        </nav>
+    <main>
+        <!--Breadcrumbs-->
+        <nav id="breadcrumbs">
+            <ul>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Running shoes</a></li>
+                <li><a href="#">Pink runners</a></li>
+            </ul>
+        </nav>
+        <!--Bilde, overskift, beskrivelse, pris og knapp for å legge til i handlekurv-->
+
+        <figure class="right-content-container flex-items">
+            <img class="active-img" src="img/pink-shoes.jpeg" alt="Pink runners">
+            <img src="img/pink-shoes.jpeg" alt="Pink runners">
+            <img src="img/pink-shoes.jpeg" alt="Pink runners">
+            <img src="img/pink-shoes.jpeg" alt="Pink runners">
+        </figure>
+
+        <section class="left-content-container flex-items">
+            <span> SHUS </span>
+            <h3> Pink runners</h3>
+            <span> 1499 kr </span>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum architecto saepe modi pariatur magni soluta nam quasi. Nemo provident amet aliquid deleniti harum, facilis debitis aliquam? Ullam accusamus praesentium officia.</p>
+            <form>
+                <label for="size">Size: </label>
+
+                <select name="size" id="size">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option> 
+                </select>
+                <button> Add to cart </button>  
+            </form>
+        </section>
+    </main>
+     <aside> 
+            <h3> More products like this</h3>
+     </aside>
+    <footer>© Buy this shoes 2026</footer>
+    </div>
+</body>
+</html>

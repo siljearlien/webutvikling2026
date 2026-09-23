@@ -6,7 +6,7 @@
 
 body {
 	margin: 0;
-	font-family: 'Segoe UI', Arial, sans-serif;
+	font-family: "Segoe UI", Arial, sans-serif;
 	background-color: #f5f7fa;
 	color: #222831;
 	line-height: 1.5;
@@ -59,11 +59,41 @@ main {
 	margin: 32px auto;
 	padding: 0 1.5rem;
 
+<<<<<<< HEAD
 	.hovedinnhold{
 		display: flex;
 		flex.wrap: wrap;
 		gap: 1rem;
 		margin-bottom: 1rem;
+=======
+	&:not(:has(table)) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: " sidepanel hovedinnhold";
+		gap: 1rem;
+		align-items: start;
+	}
+
+	.hovedinnhold {
+		/* grid-column-start: 1;
+		grid-column-end: 2; */
+
+		/* Shorthand */
+
+		/* grid-column: 2/3; */
+
+		grid-area: hovedinnhold;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 1rem;
+	}
+
+	.sidepanel {
+		/* grid-column-start: 2;
+		grid-column-end: 3; */
+		grid-area: sidepanel;
+>>>>>>> 6b2fa1b675728ea63e3e0976a901dbe771e2d580
 	}
 }
 
@@ -76,7 +106,6 @@ article {
 	background-color: #ffffff;
 	border: 1px #dde3ea solid;
 	border-radius: 0.5rem;
-	margin-bottom: 1rem;
 	padding: 1rem 20px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 

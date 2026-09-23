@@ -6,7 +6,7 @@
 
 body {
 	margin: 0;
-	font-family: 'Segoe UI', Arial, sans-serif;
+	font-family: "Segoe UI", Arial, sans-serif;
 	background-color: #f5f7fa;
 	color: #222831;
 	line-height: 1.5;
@@ -19,6 +19,10 @@ header {
 	padding: 2rem 1rem;
 	color: #ffffff;
 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
 	span {
 		font-size: 1.5rem;
 		font-weight: bold;
@@ -28,9 +32,9 @@ header {
 	nav {
 		ul {
 			list-style: none;
+			display: flex;
+			gap: 1rem;
 			li {
-				display: inline-block;
-				margin-right: 20px;
 				a {
 					color: #ffffff;
 					text-decoration: none;
@@ -51,6 +55,7 @@ main {
 	margin: 32px auto;
 	padding: 0 1.5rem;
 
+<<<<<<< HEAD
 	display:grid;
 	grid-template-columns: 2fr 1fr;
 	grid-template-areas: 'hovedinnhold sidepanel';
@@ -88,13 +93,24 @@ section{
 	grid-area: 'sidepanel';
 }
 
+=======
+	.hovedinnhold {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+>>>>>>> 6b2fa1b675728ea63e3e0976a901dbe771e2d580
 }
 
 article {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 250px;
+
 	background-color: #ffffff;
 	border: 1px #dde3ea solid;
 	border-radius: 0.5rem;
-	margin-bottom: 1rem;
 	padding: 1rem 20px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
@@ -131,6 +147,10 @@ footer {
 	color: #ffffff;
 	padding: 1rem;
 	margin-top: 2rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	p {
 		margin: 0 0 4px;

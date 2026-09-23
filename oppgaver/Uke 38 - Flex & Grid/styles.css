@@ -1,0 +1,76 @@
+/* Grunnstiler - ikke rør disse, de er bare for å gjøre boksene synlige */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 20px;
+	color: #222831;
+}
+h1 {
+	margin-top: 0;
+}
+h2 {
+	border-bottom: 2px solid #cbd5e0;
+	padding-bottom: 6px;
+	margin-top: 3rem;
+}
+p.mal {
+	background: #eef4fb;
+	border-left: 4px solid #1e3a5f;
+	padding: 10px 16px;
+	margin: 0.5rem 0 1.5rem;
+}
+.knapp {
+	padding: 10px 18px;
+	border: none;
+	border-radius: 6px;
+	background-color: #1e3a5f;
+	color: #ffffff;
+	font-weight: bold;
+	cursor: pointer;
+}
+.bilde {
+	height: 100px;
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	font-weight: bold;
+}
+.bilde:nth-child(1) {
+	background-color: #1e3a5f;
+}
+.bilde:nth-child(2) {
+	background-color: #4a6d8c;
+}
+.bilde:nth-child(3) {
+	background-color: #7c9cbf;
+}
+.bilde:nth-child(4) {
+	background-color: #9fc5e8;
+}
+.bilde:nth-child(5) {
+	background-color: #557a95;
+}
+.bilde:nth-child(6) {
+	background-color: #2b4c6f;
+}
+
+.side-layout > * {
+	background-color: #eef4fb;
+	border: 1px solid #cbd5e0;
+	border-radius: 6px;
+	padding: 12px;
+}
+
+/* --------------------------------------------------------
+Skriv CSS-en din for hver oppgave HER, under riktig
+overskrift. Du trenger ikke røre HTML-en.
+ -------------------------------------------------------- */
+/* Oppgave 1: Navigasjonsmeny (Flexbox) */
+
+/* Oppgave 2: Knapperad (Flexbox) */
+
+/* Oppgave 3: Bildegalleri (Grid) */
+
+/* Oppgave 4: Sideoppsett (Grid) */
