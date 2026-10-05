@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="icons/css/all.min.css">
+
 		<link rel="stylesheet" href="css/styles.css" />
 		<title>Produktside - Pink runners</title>
 	</head>
@@ -14,19 +16,27 @@
 					<button type="submit">Search</button>
 				</form>
 				<img id="logo" src="img/logo.png" alt="logo for BTS" />
-
 				<section>
-					<a href="#">Sign in</a>
-					<a href="#">Shopping cart</a>
+					<a href="#">
+						<i class="fa-solid fa-user"></i>
+							Sign in
+						</a>
+					<a href="#">
+						<i class="fa-solid fa-cart-shopping"></i>
+						Shopping cart</a>
 				</section>
 			</header>
 			<nav id="global-navigation">
-				<ul>
+				<button id="ham">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<ul id="menu">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Men</a></li>
 					<li><a href="#">Women</a></li>
 					<li><a href="#">Children</a></li>
 					<li><a href="#">Special Offers</a></li>
+					<li> <button id="close-ham">X</button></li>
 				</ul>
 			</nav>
 			<main>
@@ -76,5 +86,6 @@
 			</aside>
 			<footer>&copy; BUY THESE SHOES 2026</footer>
 		</div>
+		<script src="js/script.js"></script>
 	</body>
 </html>

@@ -46,7 +46,7 @@ header {
 }
 
 #global-navigation ul {
-	display: flex;
+	display: none;
 	list-style: none;
 	justify-content: space-around;
 }
@@ -128,4 +128,9 @@ footer {
 	#grid-container {
 		grid-template-areas: "header header header" "nav nav nav" "main main aside" "footer footer footer";
 	}
+	#global-navigation ul{
+		display: flex;
+
+	}
 }
+
