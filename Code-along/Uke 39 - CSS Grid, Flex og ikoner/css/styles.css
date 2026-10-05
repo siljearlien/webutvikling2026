@@ -128,9 +128,20 @@ footer {
 	#grid-container {
 		grid-template-areas: "header header header" "nav nav nav" "main main aside" "footer footer footer";
 	}
+<<<<<<< HEAD
 	#global-navigation ul{
 		display: flex;
 
+=======
+
+	#global-navigation ul {
+		display: flex;
+	}
+
+	#ham,
+	#close-ham {
+		display: none;
+>>>>>>> 8f8c9f25606342bdc8c69e28e34cc9d354461e23
 	}
 }
 
