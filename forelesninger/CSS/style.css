@@ -1,0 +1,36 @@
+*{
+
+}
+
+p {
+    font-family: sans-serif;
+}
+
+article:first-child{
+    background-color: yellow;
+
+}
+
+
+#midt-artikkel {
+    background-color: forestgreen;
+
+}
+
+.siste-artikkel {
+    background-color: red;
+}
+
+input[type="password"] {
+    border: 2 px red solid;
+    border-radius: 8 px;
+
+}
+
+.bigger.font {
+font-size: 30 px;
+font-weight: bold;
+color:blue;
+
+}
+

@@ -1,5 +1,21 @@
 /* Globale stilregler */
 
+<<<<<<< HEAD
+
+* {
+    box-sizing:border-box;
+
+
+}
+
+body{
+   margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222831;
+
+
+=======
 * {
 	box-sizing: border-box;
 }
@@ -10,10 +26,55 @@ body {
 	background-color: #f5f7fa;
 	color: #222831;
 	line-height: 1.5;
+>>>>>>> be5b849e05c93df32d2daae16c3a86575b09edd5
 }
 
 /* Header og navigasjon */
 
+<<<<<<< HEAD
+header{
+    background-color: #1e3a5f;
+    padding: 1rem 2rem 3rem 4rem; 
+    color:#ffffff;
+    
+
+   /* padding-top: 1rem; */
+   /* padding-bottom: 2rem; */
+   /* padding-left: 3rem; */
+   /* padding-right:4rem; */
+
+    span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+
+    }
+
+    nav{
+        ul {
+            list-style: none;
+            li{
+                display: inline-block;
+                margin-right: 20px;
+                a{
+                    color:#ffffff;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 15px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+
+
+        }
+
+    }
+
+
+=======
 header {
 	background-color: #1e3a5f;
 	padding: 2rem 1rem;
@@ -43,10 +104,96 @@ header {
 			}
 		}
 	}
+>>>>>>> be5b849e05c93df32d2daae16c3a86575b09edd5
 }
 
 /* Hovedinnhold */
 
+<<<<<<< HEAD
+
+main{
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 1.5rem;
+
+}
+
+article{
+    background-color: #ffffff;
+    border: 1px #dde3ea solid;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem 20px;
+    box-shadow:0 2px 6px  rgba(0, 0, 0, 0.06) ;
+
+
+     h2{
+        margin-top: 0;
+        color: #1e3a5f;
+
+    }       
+}
+
+aside{
+    section{
+        background-color: #ffffff;
+        border: 1px solid #dde3ea;
+        border-radius: 0.5 rem;
+        padding: 1rem 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    h3{
+        margin-top: 0; 
+        color: #1e3a5f;
+        border-bottom: 2px solid #dde3ea;
+    
+    }
+    li {
+        margin-bottom:0.5rem;
+
+    }
+
+}
+
+/* Foooter og kontaktskjema */
+
+footer{
+    background-color: #1e3a5f;
+    color: #ffffff;
+    padding: 1rem; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    p{
+    margin: 0 0 4x;  
+    font-weight: bold;
+    }
+    a{
+        color:#9fc5e8;
+        text-decoration: none;
+    }
+    form{
+        margin-top: 1rem;
+        max-width: 400px;
+
+    }
+    label{
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
+    input{
+        width: 100%;
+        padding: 0.5rem;
+        argin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #ffffff;
+    }
+
+=======
 main {
 	max-width: 900px;
 	margin: 32px auto;
@@ -123,18 +270,40 @@ footer {
 		border-radius: 4px;
 		background-color: #ffffff;
 	}
+>>>>>>> be5b849e05c93df32d2daae16c3a86575b09edd5
 }
 
 /* Tabell */
 
 table {
+<<<<<<< HEAD
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+=======
 	width: 100%;
 	background-color: #ffffff;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+>>>>>>> be5b849e05c93df32d2daae16c3a86575b09edd5
 }
 
 th,
 td {
+<<<<<<< HEAD
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dde3ea;
+    
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f5f7fa;
+}
+
+
+=======
 	padding: 0.5rem 1rem;
 	text-align: left;
 	border-bottom: 1px solid #dde3ea;
@@ -143,3 +312,4 @@ td {
 tbody tr:nth-child(even) {
 	background-color: #f5f7fa;
 }
+>>>>>>> be5b849e05c93df32d2daae16c3a86575b09edd5

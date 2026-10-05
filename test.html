@@ -1,0 +1,164 @@
+import docx
+from docx.shared import Inches, Pt, RGBColor
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.table import WD_TABLE_ALIGNMENT
+from docx.oxml import OxmlElement, parse_xml
+from docx.oxml.ns import nsdecls, qn
+
+doc = docx.Document()
+
+# Set margins for a clean single-page fit if possible, or well-structured layout
+sections = doc.sections
+for section in sections:
+    section.top_margin = Inches(0.6)
+    section.bottom_margin = Inches(0.6)
+    section.left_margin = Inches(0.8)
+    section.right_margin = Inches(0.8)
+
+# Color Palette (Professional Slate & Teal with warm motivational tone)
+COLOR_PRIMARY = RGBColor(24, 43, 73)      # Deep Navy
+COLOR_SECONDARY = RGBColor(0, 128, 128)  # Teal
+COLOR_TEXT = RGBColor(51, 51, 51)        # Dark Gray
+COLOR_MUTED = RGBColor(119, 119, 119)    # Muted Gray
+
+def set_cell_background(cell, fill_hex):
+    tcPr = cell._tc.get_or_add_tcPr()
+    shd = parse_xml(f'<w:shd {nsdecls("w")} w:fill="{fill_hex}"/>')
+    tcPr.append(shd)
+
+def set_cell_margins(cell, top=100, bottom=100, left=150, right=150):
+    tcPr = cell._tc.get_or_add_tcPr()
+    tcMar = OxmlElement('w:tcMar')
+    for m, val in [('top', top), ('bottom', bottom), ('left', left), ('right', right)]:
+        node = OxmlElement(f'w:{m}')
+        node.set(qn('w:w'), str(val))
+        node.set(qn('w:type'), 'dxa')
+        tcMar.append(node)
+    tcPr.append(tcMar)
+
+# Title & Header
+p_title = doc.add_paragraph()
+p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+run_title = p_title.add_run("OBLIGATORISKE ARBEIDSKRAV & EKSAMENSOVERSIKT")
+run_title.font.name = 'Arial'
+run_title.font.size = Pt(16)
+run_title.font.bold = True
+run_title.font.color.rgb = COLOR_PRIMARY
+
+p_sub = doc.add_paragraph()
+p_sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
+run_sub = p_sub.add_run("Høstsemesteret – Struktur, oversikt og motivasjon for veien til suksess! 🚀")
+run_sub.font.name = 'Arial'
+run_sub.font.size = Pt(10)
+run_sub.font.italic = True
+run_sub.font.color.rgb = COLOR_SECONDARY
+
+# Motivational Intro Callout Box
+table_intro = doc.add_table(rows=1, cols=1)
+table_intro.alignment = WD_TABLE_ALIGNMENT.CENTER
+cell_intro = table_intro.cell(0, 0)
+set_cell_background(cell_intro, "F0F4F8")
+set_cell_margins(cell_intro, top=120, bottom=120, left=200, right=200)
+p_intro = cell_intro.paragraphs[0]
+run_intro = p_intro.add_run(
+    "God mandag! Dette semesteret er fullt av spennende utfordringer. "
+    "Med struktur, jevn innsats og fullt fokus på lab-øvelser i Webutvikling (selv om kun 5 kreves, satser du på alle!) "
+    "kommer dette til å gå strålende. Du har full kontroll – nå kjører vi på mot toppkarakterer! 🌟"
+)
+run_intro.font.name = 'Arial'
+run_intro.font.size = Pt(9.5)
+run_intro.font.color.rgb = COLOR_TEXT
+
+doc.add_paragraph().paragraph_format.space_after = Pt(4)
+
+# Function to add styled headings
+def add_section_header(text):
+    p = doc.add_paragraph()
+    p.paragraph_format.space_before = Pt(8)
+    p.paragraph_format.space_after = Pt(2)
+    run = p.add_run(text)
+    run.font.name = 'Arial'
+    run.font.size = Pt(12)
+    run.font.bold = True
+    run.font.color.rgb = COLOR_PRIMARY
+    return p
+
+# Table setup function
+def create_styled_table(headers, data):
+    table = doc.add_table(rows=len(data) + 1, cols=len(headers))
+    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    
+    # Header row
+    hdr_cells = table.rows[0].cells
+    for i, header_text in enumerate(headers):
+        hdr_cells[i].text = header_text
+        set_cell_background(hdr_cells[i], "182B49") # Primary Navy
+        set_cell_margins(hdr_cells[i], top=80, bottom=80, left=120, right=120)
+        p = hdr_cells[i].paragraphs[0]
+        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        for run in p.runs:
+            run.font.name = 'Arial'
+            run.font.size = Pt(9.5)
+            run.font.bold = True
+            run.font.color.rgb = RGBColor(255, 255, 255)
+            
+    # Data rows
+    for r_idx, row_data in enumerate(data):
+        row_cells = table.rows[r_idx + 1].cells
+        bg_hex = "F9FBFD" if r_idx % 2 == 1 else "FFFFFF"
+        for c_idx, cell_value in enumerate(row_data):
+            row_cells[c_idx].text = cell_value
+            set_cell_background(row_cells[c_idx], bg_hex)
+            set_cell_margins(row_cells[c_idx], top=60, bottom=60, left=120, right=120)
+            p = row_cells[c_idx].paragraphs[0]
+            p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+            for run in p.runs:
+                run.font.name = 'Arial'
+                run.font.size = Pt(9)
+                run.font.color.rgb = COLOR_TEXT
+    doc.add_paragraph().paragraph_format.space_after = Fr = Pt(2)
+    return table
+
+# 1. AI og Designprosjekt (10stp)
+add_section_header("ITF10926 KI og designprosjekt (10 sp)")
+headers_ai = ["Arbeidskrav / Aktivitet", "Frist / Tidspunkt"]
+data_ai = [
+    ["Arbeidskrav 1 – Innsiktsarbeid og problemstilling", "11. September kl. 18:00"],
+    ["Arbeidskrav 2 – Generativ KI som læringspartner", "18. September kl. 23:59"],
+    ["Arbeidskrav 3 – Prototyping", "09. Oktober kl. 18:00"],
+    ["Arbeidskrav 4 – Generativ KI som kritiker", "09. Oktober kl. 23:59"],
+    ["Arbeidskrav 5 – Evaluering og testing", "30. Oktober kl. 18:00"],
+    ["Arbeidskrav 6 – Lokal KI og EU AI ACT", "30. Oktober kl. 23:59"],
+    ["Arbeidskrav 7 – Akademisk skriving", "20. November kl. 18:00"]
+]
+create_styled_table(headers_ai, data_ai)
+
+# 2. Programmering 1 & Innføring i gen. AI
+add_section_header("Programmering 1 (10 sp) & Innføring i generativ AI (10 sp)")
+headers_prog = ["Emne / Oblig", "Frist / Tidspunkt"]
+data_prog = [
+    ["ITF10219 Programmering 1 - Oblig 1", "04. September"],
+    ["ITF10219 Programmering 1 - Oblig 2", "18. September"],
+    ["ITF10219 Programmering 1 - Oblig 3", "02. Oktober"],
+    ["ITF10219 Programmering 1 - Oblig 4", "23. Oktober"],
+    ["ITF10219 Programmering 1 - Oblig 5", "06. November"],
+    ["ITF31824 Innføring i generativ AI - Oblig 1", "20. September"],
+    ["ITF31824 Innføring i generativ AI - Oblig 2", "21. Oktober"]
+]
+create_styled_table(headers_prog, data_prog)
+
+# 3. Webutvikling (10stp) & Eksamensoversikt
+add_section_header("ITF10611 Webutvikling (10 sp) & Eksamensoversikt")
+headers_web = ["Kategori", "Detaljer & Datoer"]
+data_web = [
+    ["Webutvikling Lab-øvelser", "Mandager eller torsdager. Mål: Deltakelse på ALLE (minst 5 obligatoriske for eksamen). Velg dag etter ukens tema."],
+    ["Nøkkel-temaer Webutvikling", "Uke 37 (HTML5), Uke 39 (CSS Layout / Flexbox & Grid), Uke 41 (Responsivt design). Andre temaer (GitHub, Figma, Sass, SEO m.m.) er valgfrie."],
+    ["Eksamen: Kunstig intelligens i hverdagen (2,5 sp)", "04. November (Arbeidskrav kommer)"],
+    ["Eksamen: Innføring i generativ AI (10 sp)", "17. November"],
+    ["Eksamen: Webutvikling (10 sp)", "02. Desember"],
+    ["Eksamen: Programmering 1 (10 sp)", "09. Desember"],
+    ["Eksamen: AI og designprosjekt (10 sp)", "15. Desember"]
+]
+create_styled_table(headers_web, data_web)
+
+doc.save("Oblig_og_Arbeidskrav_Oversikt.docx")

@@ -55,12 +55,52 @@ main {
 	margin: 32px auto;
 	padding: 0 1.5rem;
 
+<<<<<<< HEAD
+	display:grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas: 'hovedinnhold sidepanel';
+	gap: 1rem;
+	align-items:start;
+	grid-auto-flow: column;
+
+
+	.hovedinnhold{
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		/* Shorthand */
+
+/* 		grid-column: 2/3; */
+		displaY: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) ;
+		gap: 1 rem;
+
+	}
+
+	.sidepanel {
+	grid-column-start: 2;
+	grid-column-end:3;
+
+	}
+
+
+section{
+	grid-area: 'hovedinnhold';
+
+}
+
+section{
+	grid-area: 'sidepanel';
+}
+
+=======
 	.hovedinnhold {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1rem;
 		margin-bottom: 1rem;
 	}
+>>>>>>> 6b2fa1b675728ea63e3e0976a901dbe771e2d580
 }
 
 article {
