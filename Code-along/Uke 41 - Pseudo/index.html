@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="no">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bryggeriet Kaffebar</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header class="toppheader">
+			<span class="logo">Bryggeriet Kaffebar</span>
+			<nav class="hovednav">
+				<ul>
+					<li><a href="#meny">Meny</a></li>
+					<li><a href="#om-oss">Om oss</a></li>
+					<li><a href="#omtaler">Omtaler</a></li>
+					<li><a href="#galleri">Galleri</a></li>
+					<li><a href="#kontakt">Kontakt</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<h1>Bryggeriet Kaffebar</h1>
+			<p>Nybrent kaffe, hjemmebakst og en god stol å sette seg i.</p>
+			<a href="#meny" class="knapp">Se menyen</a>
+		</section>
+
+		<main>
+			<section id="meny" class="meny-seksjon">
+				<h2>Meny</h2>
+				<ul class="menyliste">
+					<li>
+						<h3>Espresso</h3>
+						<p>Kort, intens og konsentrert.</p>
+						<span class="pris">35 kr</span>
+					</li>
+					<li>
+						<h3>Cappuccino</h3>
+						<p>Espresso med melk og luftig melkeskum.</p>
+						<span class="pris">45 kr</span>
+					</li>
+					<li>
+						<h3>Caffè latte</h3>
+						<p>Mild og melkerik, med en espresso i bunnen.</p>
+						<span class="pris">48 kr</span>
+					</li>
+					<li>
+						<h3>Iskaffe</h3>
+						<p>Kald brygg servert over is, med litt melk.</p>
+						<span class="pris">50 kr</span>
+					</li>
+					<li>
+						<h3>Kanelsnurr</h3>
+						<p>Nybakt, med sprø kanelsukker på toppen.</p>
+						<span class="pris">38 kr</span>
+					</li>
+					<li>
+						<h3>Sjokoladekake</h3>
+						<p>Myk i midten, med et lag sjokoladeglasur.</p>
+						<span class="pris">42 kr</span>
+					</li>
+				</ul>
+			</section>
+
+			<section id="om-oss" class="om-oss">
+				<h2>Om oss</h2>
+				<figure>
+					<img
+						src="https://picsum.photos/500/500"
+						alt="Interiøret i Bryggeriet Kaffebar, med trebord og hyller fulle av kaffebønner" />
+					<figcaption>Bryggeriet har holdt til i de samme lokalene siden 2014.</figcaption>
+				</figure>
+				<p>
+					Bryggeriet Kaffebar åpnet dørene i 2014, med én enkel idé: kaffe skal brygges med omhu, og
+					kafeen skal være et sted folk har lyst til å bli. Vi bytter ut kaffebønnene hver fjerde
+					uke, alltid fra små, uavhengige brennerier, og bakst og kaker lages fra scratch hver
+					morgen av vårt eget kjøkken.
+				</p>
+				<p>
+					I dag er vi en håndfull faste ansatte som alle deler samme lidenskap for godt håndverk,
+					enten det handler om en perfekt espresso eller en kladdkake som ikke er for søt.
+				</p>
+			</section>
+
+			<section id="omtaler" class="omtaler-seksjon">
+				<h2>Hva gjestene sier</h2>
+				<div class="omtaler-rad">
+					<blockquote>
+						<p>Beste kaffen i byen, uten tvil. Og kanelsnurrene er helt på et annet nivå.</p>
+						<footer>&mdash; <cite>Kari H.</cite></footer>
+					</blockquote>
+					<blockquote>
+						<p>Koselig sted å jobbe fra. Rolig stemning og aldri trengsel ved stikkontaktene.</p>
+						<footer>&mdash; <cite>Jonas E.</cite></footer>
+					</blockquote>
+					<blockquote>
+						<p>Personalet husker bestillingen min hver gang. Det er sånt som gjør en stamgjest.</p>
+						<footer>&mdash; <cite>Marte L.</cite></footer>
+					</blockquote>
+				</div>
+			</section>
+
+			<section id="galleri" class="galleri-seksjon">
+				<h2>Galleri</h2>
+				<ul class="galleri-liste">
+					<li>
+						<img src="https://picsum.photos/500/500" alt="Latte art i en kaffekopp" />
+					</li>
+					<li>
+						<img src="https://picsum.photos/500/500" alt="Nybakte kanelsnurrer på et fat" />
+					</li>
+					<li>
+						<img src="https://picsum.photos/500/500" alt="Baren med espressomaskinen" />
+					</li>
+					<li>
+						<img src="https://picsum.photos/500/500" alt="Sitteplasser ved vinduet" />
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer id="kontakt" class="sidefot">
+			<div class="kontakt-info">
+				<h2>Besøk oss</h2>
+				<address>
+					Bryggegata 12<br />
+					1607 Fredrikstad<br />
+					<a href="tel:+4769000000">69 00 00 00</a><br />
+					<a href="mailto:post@bryggeriet-kaffebar.no">post@bryggeriet-kaffebar.no</a>
+				</address>
+				<p>Åpningstider: man&ndash;fre 08&ndash;18, lør&ndash;søn 09&ndash;16.</p>
+			</div>
+
+			<form class="kontaktskjema">
+				<h2>Send oss en melding</h2>
+				<label for="navn">Navn</label>
+				<input type="text" id="navn" name="navn" required placeholder="Skriv navnet ditt" />
+
+				<label for="epost">E-post</label>
+				<input type="email" id="epost" name="epost" required placeholder="din@epost.no" />
+
+				<label for="melding">Melding</label>
+				<textarea id="melding" name="melding" rows="4" placeholder="Hva lurer du på?"></textarea>
+
+				<button type="submit">Send melding</button>
+			</form>
+
+			<p class="opphavsrett">&copy; 2026 Bryggeriet Kaffebar</p>
+		</footer>
+	</body>
+</html>
