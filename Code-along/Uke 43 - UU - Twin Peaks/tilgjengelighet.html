@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Twin Peaks</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="wrap header-inner">
+			<h1 class="logo" onclick="location.href='index.html'">Twin Peaks</h1>
+			<div class="menu">
+			<div class="menu-item" onclick="location.href='index.html'">Forside</div>
+			<div class="menu-item" onclick="location.href='karakterer.html'">Karakterer</div>
+			<div class="menu-item" onclick="location.href='sesonger.html'">Sesonger</div>
+			<div class="menu-item" onclick="location.href='episoder.html'">Episoder</div>
+			<div class="menu-item active" onclick="location.href='tilgjengelighet.html'">Tilgjengelighet</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="wrap">
+			<div class="page-title">Tilgjengelighet</div>
+			<p class="lead">Her kan du lese om tilgjengelighet på nettstedet.</p>
+
+			<h4>Slik kan du teste selv</h4>
+			<p>1. Tastatur: Legg bort musa og bruk Tab, Shift+Tab, Enter og mellomrom. Ser du alltid hvor fokus er?<br>
+			2. Skjermleser: Slå på VoiceOver (Cmd+F5 på Mac) eller NVDA (gratis på Windows), og naviger etter overskrifter og landemerker.<br>
+			3. Zoom: Zoom til 400 % i nettleseren. Må du scrolle sidelengs for å lese teksten?<br>
+			4. Tekststørrelse: Øk standard skriftstørrelse i nettleserinnstillingene. Følger teksten med?<br>
+			5. Automatiske verktøy: Kjør Lighthouse i Chrome DevTools, eller utvidelsene axe DevTools eller WAVE.</p>
+
+			<h4>Meld fra om problemer</h4>
+			<p>Har du funnet noe som ikke fungerer? Gi beskjed i skjemaet. Felt med rød ramme må fylles ut.</p>
+
+			<div class="form">
+				<input type="text" placeholder="Navn">
+				<input type="text" class="required" placeholder="E-post">
+				<select>
+					<option>Hvilken side gjelder det?</option>
+					<option>Forside</option>
+					<option>Karakterer</option>
+					<option>Sesonger</option>
+					<option>Episoder</option>
+					<option>Tilgjengelighet</option>
+				</select>
+				<textarea class="required" rows="5" placeholder="Hva er problemet?"></textarea>
+				<p>Vil du at vi svarer deg?</p>
+				<div><input type="radio" name="svar" checked> Ja, svar meg på e-post</div>
+				<div><input type="radio" name="svar"> Nei, det trengs ikke</div>
+				<div class="button">Send</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="wrap">
+			<p>En uoffisiell fanside.</p>
+			<p>Twin Peaks er skapt av David Lynch og Mark Frost. Les om tilgjengelighet <a href="tilgjengelighet.html">her</a>.</p>
+		</div>
+	</div>
+
+</body>
+</html>

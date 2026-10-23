@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'ITC Avant Garde Gothic Demi Condensed';
+    src: url("../fonts/ITC Avant Garde Gothic Demi Condensed.otf") format('opentype');
+}
+
+:root {
+    --bg: #f6f0e1;
+    --text: #1d1a16;
+    --light: #a59c8a;
+    --red: #8c1c13;
+    --green: #1f3d2b;
+    --header-font: 'ITC Avant Garde Gothic Demi Condensed', Georgia, serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--text);
+    background: var(--bg);
+}
+
+h1,
+h4,
+.page-title,
+.card-title {
+    font-family: var(--header-font);
+}
+
+p,
+li {
+    max-width: 65ch;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.wrap {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ---------- Topplinje og meny ---------- */
+.header,
+.footer {
+    background: var(--green);
+    color: #5f7d68;
+    padding: 1rem 0;
+}
+
+.header {
+    border-bottom: .5rem solid var(--red);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+    color: var(--bg);
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-item {
+    font-size: 12px;
+    color: #8fa596;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.menu-item.active {
+    color: #ff6b5b;
+}
+
+.footer a {
+    color: #8fa596;
+}
+
+/* ---------- Innhold ---------- */
+.content {
+    padding: 1rem 0 3rem;
+}
+
+.page-title {
+    margin: 1.5rem 0 1rem;
+    font-size: 36px;
+}
+
+h4 {
+    margin: 2rem 0 .5rem;
+    font-size: 24px;
+}
+
+.lead {
+    font-size: 18px;
+    color: var(--light);
+}
+
+.small {
+    font-size: 11px;
+    color: var(--light);
+}
+
+.facts td {
+    padding: .25rem 1.5rem .25rem 0;
+}
+
+.quote {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    max-width: 50rem;
+    background: white;
+    border-left: .4rem solid var(--red);
+}
+
+/* ---------- Kort ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    display: block;
+    padding: 1rem;
+    color: var(--text);
+    background: white;
+    border-top: .5rem solid var(--red);
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.read-more {
+    color: var(--red);
+}
+
+/* ---------- Spoilere ---------- */
+.spoiler {
+    color: white;
+    background: white;
+}
+
+.spoiler:hover {
+    color: var(--text);
+}
+
+/* ---------- Tabeller ---------- */
+.episodes {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+.episodes td {
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #e0d8c6;
+}
+
+.table-head td {
+    font-weight: bold;
+    color: var(--bg);
+    background: var(--green);
+}
+
+/* ---------- Skjema ---------- */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    max-width: 30rem;
+}
+
+.form input[type="text"],
+.form select,
+.form textarea {
+    padding: .5rem;
+    font: inherit;
+    border: 1px solid #ddd5c4;
+}
+
+.form .required {
+    border-color: #e5a29a;
+}
+
+.button {
+    align-self: start;
+    padding: .3rem 1rem;
+    font-weight: bold;
+    color: white;
+    background: #e57b6e;
+    cursor: pointer;
+}
