@@ -9,6 +9,7 @@
     --light: #a59c8a;
     --red: #8c1c13;
     --green: #1f3d2b;
+    --focus: #ffd166;
     --header-font: 'ITC Avant Garde Gothic Demi Condensed', Georgia, serif;
 }
 
@@ -16,8 +17,10 @@
     box-sizing: border-box;
 }
 
-*:focus {
-    outline: none;
+:focus-visible{
+    outline: 3px solid var(--focus);
+    outline-offset: 6px;
+
 }
 
 body {
@@ -27,6 +30,17 @@ body {
     line-height: 1.2;
     color: var(--text);
     background: var(--bg);
+}
+
+#go-to-main{
+    position: absolute;
+    left: 1rem;
+    top:-10rem;
+
+    &:focus{
+        top:1rem;
+
+    }
 }
 
 h1,
@@ -86,6 +100,7 @@ a {
 .menu {
     display: flex;
     gap: 1rem;
+    list-style: none;
 }
 
 .menu-item {
